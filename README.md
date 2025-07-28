@@ -70,7 +70,7 @@ npx expo start
 ## 🔗 Live Preview
 
 📱 Try it on your phone with Expo Go:  
-👉 [MakolaStore Expo Preview](https://expo.dev/@blunttree88/MakolaStoreAppp)
+👉 [MakolaStore Expo Preview](https://expo.dev/@blunttree88/MakolaStore)
 
 > Works best on mobile using the [Expo Go app](https://expo.dev/client)
 
@@ -78,7 +78,7 @@ npx expo start
 
 ## 📲 Android APK (Install)
 
-👉 [Download MakolaStore APK](https://expo.dev/accounts/blunttree88/projects/MakolaStoreAppp/builds/9a67f6aa-5965-4736-9c21-e33de8599d87)
+👉 [Download MakolaStore APK](https://expo.dev/accounts/blunttree88/projects/MakolaStore/builds/ab193838-3a15-48db-aec1-c11fd5dc9907)
 
 > Install the app directly on any Android device.  
 > Make sure to enable “Install from unknown sources” in device settings.
