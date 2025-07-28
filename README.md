@@ -1,96 +1,91 @@
-# 🛒 MakolaStore – Multi-Country E-Commerce App
+# 🛒 MakolaStore
 
-**MakolaStore** is a modular and scalable **React Native mobile app** designed to deliver a seamless shopping experience across countries. It allows users to browse and shop in **localized storefronts** such as Ghana and the USA, each powered by their own **WooCommerce stores**.
+**MakolaStore** is a multi-country e-commerce mobile app built with React Native and WooCommerce REST APIs. It allows users in Ghana, the US, and beyond to shop locally from their country-specific storefronts, all within one seamless app.
 
-> Think Jumia meets Amazon — but country-smart and mobile-first.
-
----
-
-## 🌍 Key Features
-
-- 🌐 **Multi-Country Store Selection**  
-  Choose between Ghana and US stores via welcome screen with flag icons
-
-- 🔐 **Authentication**  
-  JWT-based login/signup with token stored in AsyncStorage  
-  ✅ Already working for the Ghana store (makolastore.com)
-
-- 🏠 **Home Screen**  
-  Displays product recommendations, flash sales, banners, and category icons
-
-- 📁 **Categories & Products**  
-  Browse products by categories with dynamic tabs and subcategories
-
-- 🛍️ **Product Detail Screen**  
-  View image gallery, variants, pricing, and "Add to Cart" button
-
-- 🛒 **Cart & Checkout**  
-  Manage cart items locally; place orders via WebView or API-based checkout
-
-- 📦 **Order Tracking**  
-  Track shipping status and delivery info using WooCommerce orders API
-
-- 👤 **Profile Screen**  
-  View account info, order history, and log out
-
-- 🔔 **Push Notifications**  
-  Notify users of new products (already implemented on Ghana store)
+> Think of it as Jumia meets Amazon — built mobile-first for Africa and beyond.
 
 ---
 
-## ⚙️ Tech Stack
+## 🌍 Features
 
-| Layer         | Stack/Tools                                 |
-|---------------|----------------------------------------------|
-| **Frontend**  | React Native, React Navigation, AsyncStorage |
-| **Backend**   | WooCommerce REST API, JWT Auth               |
-| **Notifications** | Custom PHP API in WooCommerce (Ghana)    |
-
----
-
-## 🗂️ File Structure
-
-```
-/src
-├── /components
-│   ├── HeaderBar.js, SearchBar.js, CategoryIcons.js, ...
-├── /constants
-│   └── countries.js
-├── /screens
-│   ├── WelcomeScreen.js, CountrySelection.js, ...
-├── /services
-│   └── WooAPI.js
-├── /context
-│   └── CountryContext.js
-├── App.js
-```
+- 🗺️ Country-based store selection (Ghana, US, more)
+- 🔐 Secure login/signup (JWT Auth – Ghana Store live)
+- 🏠 Product browsing with flash sales, banners, categories
+- 🛒 Cart & checkout flow
+- 🚚 Order tracking
+- 📱 Push notifications for new products (Ghana Store live)
+- 👤 Profile screen with logout and order history
+- 📦 Future US store support in progress
 
 ---
 
-## 🛠 Setup & Installation
+## 🧰 Tech Stack
+
+| Layer        | Tools & Frameworks                          |
+|--------------|----------------------------------------------|
+| **Frontend** | React Native, TailwindCSS, Expo, Axios       |
+| **Backend**  | WooCommerce REST API (JWT + Products + Orders) |
+| **Auth**     | JWT via WP plugin                            |
+| **Push**     | Custom WooCommerce functions + Expo Push API |
+| **State**    | Context API, AsyncStorage                    |
+| **Navigation** | React Navigation                          |
+
+---
+
+## 📦 Setup & Installation
 
 ```bash
 # Clone the repo
-git clone https://github.com/Blunttree-Gh/makolastore.git
-cd makolastore
+git clone https://github.com/Blunttree-Gh/MakolaStore-repo.git
+cd MakolaStore-repo
 
 # Install dependencies
 npm install
 
-# Start the development server
+# Run development server
 npx expo start
 ```
 
 ---
 
-## 🧭 Roadmap
+## 💻 Screenshots
 
-- ✅ Ghana store authentication + push notifications complete
-- 🚧 US store authentication and product sync in progress
-- 📱 Complete category screen, order tracking, and full checkout flow
-- 🔔 Replicate push notification logic for US store
-- 📸 Add screenshots and app store preview
-- 🌍 Deploy mobile app via Expo and Play Store
+### 🌍 Country Selector  
+![Country](./makola-country.jpg)
+
+### 🏠 Home Screen  
+![Home](./makola-home.jpg)
+
+### 🔐 Login Screen  
+![Login](./makola-login.jpg)
+
+### 🛒 Cart Screen  
+![Cart](./makola-cart.jpg)
+
+### 📦 Orders (Optional)  
+![Orders](./makola-orders.jpg)
+
+---
+
+## 🗂 Project Structure
+
+```
+/src
+├── /components       # Reusable UI components
+├── /screens          # Screens: Home, Cart, Login, etc.
+├── /services         # WooCommerce API logic
+├── /context          # Country/store context
+├── App.js            # Main entry
+```
+
+---
+
+## 🚧 Status & Roadmap
+
+- ✅ Ghana Store Auth, Notifications → DONE
+- 🧪 US Store Integration → In progress
+- 📱 Mobile demo (Expo Go) → Ready
+- 🌐 Hosting WooCommerce API → Active (makolastore.com)
 
 ---
 
@@ -99,7 +94,7 @@ npx expo start
 **Jonathan Haile-Selassie Azembah**  
 💼 Full-Stack Developer | Mobile Dev | Cybersecurity Enthusiast  
 📧 blunttree8819@gmail.com  
-🔗 [GitHub](https://github.com/Blunttree-Gh) | [LinkedIn](https://linkedin.com/in/agambah)
+🔗 [GitHub](https://github.com/Blunttree-Gh) • [LinkedIn](https://linkedin.com/in/agambah)
 
 ---
 
@@ -107,6 +102,4 @@ npx expo start
 
 MIT License — free to use with credit.
 
----
-
-**Let’s power cross-border shopping with secure, scalable mobile commerce.**
+> Let’s build mobile-first African e-commerce experiences together.
