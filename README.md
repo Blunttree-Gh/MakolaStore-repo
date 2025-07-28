@@ -67,6 +67,15 @@ npx expo start
 
 ---
 
+## 🔗 Live Preview
+
+📱 Try it on your phone with Expo Go:  
+👉 [MakolaStore Expo Preview](https://expo.dev/@blunttree88/MakolaStoreAppp)
+
+> Works best on mobile using the [Expo Go app](https://expo.dev/client)
+
+---
+
 ## 🗂 Project Structure
 
 ```
@@ -82,9 +91,9 @@ npx expo start
 
 ## 🚧 Status & Roadmap
 
-- ✅ Ghana Store Auth, Notifications → DONE
-- 🧪 US Store Integration → In progress
-- 📱 Mobile demo (Expo Go) → Ready
+- ✅ Ghana Store Auth, Notifications → DONE  
+- 🧪 US Store Integration → In progress  
+- 📱 Mobile demo (Expo Go) → Ready  
 - 🌐 Hosting WooCommerce API → Active (makolastore.com)
 
 ---
