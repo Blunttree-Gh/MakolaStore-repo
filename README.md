@@ -62,9 +62,6 @@ npx expo start
 ### 🛒 Cart Screen  
 ![Cart](./makola-cart.jpg)
 
-### 📦 Orders (Optional)  
-![Orders](./makola-orders.jpg)
-
 ---
 
 ## 🔗 Live Preview
