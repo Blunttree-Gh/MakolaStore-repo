@@ -76,6 +76,15 @@ npx expo start
 
 ---
 
+## 📲 Android APK (Install)
+
+👉 [Download MakolaStore APK](https://expo.dev/accounts/blunttree88/projects/MakolaStoreAppp/builds/9a67f6aa-5965-4736-9c21-e33de8599d87)
+
+> Install the app directly on any Android device.  
+> Make sure to enable “Install from unknown sources” in device settings.
+
+---
+
 ## 🗂 Project Structure
 
 ```
@@ -94,6 +103,7 @@ npx expo start
 - ✅ Ghana Store Auth, Notifications → DONE  
 - 🧪 US Store Integration → In progress  
 - 📱 Mobile demo (Expo Go) → Ready  
+- 📲 Android `.apk` available  
 - 🌐 Hosting WooCommerce API → Active (makolastore.com)
 
 ---
