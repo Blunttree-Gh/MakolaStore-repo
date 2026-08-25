@@ -1,121 +1,282 @@
 # 🛒 MakolaStore
 
-**MakolaStore** is a multi-country e-commerce mobile app built with React Native and WooCommerce REST APIs. It allows users in Ghana, the US, and beyond to shop locally from their country-specific storefronts, all within one seamless app.
+**MakolaStore** is a mobile-first, multi-country e-commerce application built with **React Native and Expo**, integrating with **WooCommerce REST APIs** to provide country-specific shopping experiences from a single mobile application.
 
-> Think of it as Jumia meets Amazon — built mobile-first for Africa and beyond.
+The project was built to explore how one application can support multiple markets while maintaining localized storefronts, authentication, products, orders, cart and checkout workflows.
 
 ---
 
-## 🌍 Features
+## 🚀 Project Highlights
 
-- 🗺️ Country-based store selection (Ghana, US, more)
-- 🔐 Secure login/signup (JWT Auth – Ghana Store live)
-- 🏠 Product browsing with flash sales, banners, categories
-- 🛒 Cart & checkout flow
-- 🚚 Order tracking
-- 📱 Push notifications for new products (Ghana Store live)
-- 👤 Profile screen with logout and order history
-- 📦 Future US store support in progress
+- 🌍 Multi-country storefront selection
+- 🇬🇭 Ghana storefront integration
+- 🇺🇸 US storefront integration in progress
+- 🔐 JWT-based authentication
+- 🛍️ Product browsing and categories
+- 🛒 Cart and checkout
+- 📦 Order history and tracking
+- 🔔 Push notifications
+- 👤 User profile and account management
+- 💾 Persistent local state with AsyncStorage
+- 🔌 WooCommerce REST API integration
+- 📱 Android APK available
+- ⚡ Expo development preview available
+
+---
+
+## 🎯 Why I Built This
+
+MakolaStore was built as a practical exploration of mobile commerce and multi-market application architecture.
+
+Rather than building only isolated UI screens, the project connects a mobile frontend to a real e-commerce backend and implements complete user flows:
+
+**Country Selection → Authentication → Product Discovery → Cart → Checkout → Orders → Account**
+
+The application is designed so that additional countries and storefronts can be introduced without creating an entirely separate mobile application for each market.
+
+---
+
+## 🏗️ Architecture
+
+```text
+React Native / Expo
+        │
+        ├── Screens
+        ├── Reusable Components
+        ├── Context / State
+        └── Navigation
+                │
+                ▼
+          API Services
+                │
+                ▼
+       WooCommerce REST API
+                │
+        ┌───────┴────────┐
+        ▼                ▼
+   Ghana Store       US Store
+```
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer        | Tools & Frameworks                          |
-|--------------|----------------------------------------------|
-| **Frontend** | React Native, TailwindCSS, Expo, Axios       |
-| **Backend**  | WooCommerce REST API (JWT + Products + Orders) |
-| **Auth**     | JWT via WP plugin                            |
-| **Push**     | Custom WooCommerce functions + Expo Push API |
-| **State**    | Context API, AsyncStorage                    |
-| **Navigation** | React Navigation                          |
+| Area | Technologies |
+|---|---|
+| Mobile | React Native, Expo |
+| Language | JavaScript |
+| UI | React Native, TailwindCSS |
+| Navigation | React Navigation |
+| API Communication | Axios |
+| Backend | WooCommerce REST API |
+| Authentication | JWT |
+| State Management | Context API |
+| Local Storage | AsyncStorage |
+| Notifications | Expo Push API |
+| Version Control | Git / GitHub |
 
 ---
 
-## 📦 Setup & Installation
+## 📱 Application Screens
 
-```bash
-# Clone the repo
-git clone https://github.com/Blunttree-Gh/MakolaStore-repo.git
-cd MakolaStore-repo
+### 🌍 Country Selection
 
-# Install dependencies
-npm install
+Allows users to select the storefront corresponding to their market.
 
-# Run development server
-npx expo start
-```
+![Country Selector](./makola-country.jpg)
 
----
+### 🏠 Home Screen
 
-## 💻 Screenshots
+Provides access to products, categories, promotional content and shopping functionality.
 
-### 🌍 Country Selector  
-![Country](./makola-country.jpg)
+![Home Screen](./makola-home.jpg)
 
-### 🏠 Home Screen  
-![Home](./makola-home.jpg)
+### 🔐 Authentication
 
-### 🔐 Login Screen  
-![Login](./makola-login.jpg)
+User login and account authentication using JWT-based authentication.
 
-### 🛒 Cart Screen  
-![Cart](./makola-cart.jpg)
+![Login Screen](./makola-login.jpg)
+
+### 🛒 Cart
+
+Users can review selected products before proceeding through the checkout process.
+
+![Cart Screen](./makola-cart.jpg)
 
 ---
 
-## 🔗 Live Preview
+## 🔗 Try the Application
 
-📱 Try it on your phone with Expo Go:  
-👉 [MakolaStore Expo Preview](https://expo.dev/@blunttree88/MakolaStore)
+### 📱 Expo Preview
 
-> Works best on mobile using the [Expo Go app](https://expo.dev/client)
+The application can be previewed using Expo Go.
+
+**[Open MakolaStore Expo Preview](https://expo.dev/@blunttree88/MakolaStore)**
+
+> For the best experience, open the project on a mobile device using Expo Go.
+
+### 📲 Android APK
+
+An Android build is also available for direct installation.
+
+**[Download / Install MakolaStore APK](https://expo.dev/accounts/blunttree88/projects/MakolaStore/builds/ab193838-3a15-48db-aec1-c11fd5dc9907)**
 
 ---
 
-## 📲 Android APK (Install)
+## 🧠 Engineering Challenges
 
-👉 [Download MakolaStore APK](https://expo.dev/accounts/blunttree88/projects/MakolaStore/builds/ab193838-3a15-48db-aec1-c11fd5dc9907)
+One of the more difficult parts of developing MakolaStore was dealing with problems in the React Native/Expo Android development environment.
 
-> Install the app directly on any Android device.  
-> Make sure to enable “Install from unknown sources” in device settings.
+During development, I encountered issues involving:
+
+- Dependency compatibility
+- Expo / React Native configuration
+- Gradle build configuration
+- Android native tooling
+- NDK compatibility
+- Package conflicts
+- Build and environment configuration
+
+Rather than treating each error independently, I approached the problems by reproducing the failure, examining the build output, tracing the failure to the relevant dependency or configuration layer, making controlled changes and then rebuilding to verify the result.
+
+This experience reinforced an important debugging principle:
+
+> **The first error reported by a build system is not always the root cause.**
+
+The process improved my ability to investigate problems across application code, dependencies and the underlying development environment.
 
 ---
 
-## 🗂 Project Structure
+## 🧩 Key Development Areas
 
-```
+### Multi-Country Architecture
+
+The application uses country/store selection to determine which storefront users interact with.
+
+This provides a foundation for expanding the application to additional markets without maintaining completely separate mobile applications for each market.
+
+### API Integration
+
+The mobile application communicates with WooCommerce through REST APIs for operations such as:
+
+- Product retrieval
+- Categories
+- Authentication
+- Orders
+- Store-specific data
+
+### Authentication
+
+The application implements JWT-based authentication for user account functionality.
+
+### State Management
+
+React Context API is used for application-level state, while AsyncStorage provides local persistence where required.
+
+### Notifications
+
+The project integrates Expo Push Notifications with custom WooCommerce functionality to support product notification workflows.
+
+---
+
+## 📂 Project Structure
+
+```text
 /src
-├── /components       # Reusable UI components
-├── /screens          # Screens: Home, Cart, Login, etc.
-├── /services         # WooCommerce API logic
-├── /context          # Country/store context
-├── App.js            # Main entry
+├── /components
+│   └── Reusable UI components
+│
+├── /screens
+│   ├── Home
+│   ├── Login
+│   ├── Signup
+│   ├── Cart
+│   ├── Products
+│   └── Profile
+│
+├── /services
+│   └── API and WooCommerce integration
+│
+├── /context
+│   └── Application and store state
+│
+└── App.js
 ```
 
 ---
 
-## 🚧 Status & Roadmap
+## 🚧 Current Status
 
-- ✅ Ghana Store Auth, Notifications → DONE  
-- 🧪 US Store Integration → In progress  
-- 📱 Mobile demo (Expo Go) → Ready  
-- 📲 Android `.apk` available  
-- 🌐 Hosting WooCommerce API → Active (makolastore.com)
+| Feature | Status |
+|---|---|
+| Ghana Store | ✅ Active |
+| Country Selection | ✅ Implemented |
+| Authentication | ✅ Implemented |
+| Product Browsing | ✅ Implemented |
+| Cart | ✅ Implemented |
+| Checkout Flow | ✅ Implemented |
+| Order Tracking | ✅ Implemented |
+| Push Notifications | ✅ Implemented |
+| Android Build | ✅ Available |
+| Expo Preview | ✅ Available |
+| US Store Integration | 🚧 In Progress |
+| Additional Markets | 🔮 Planned |
 
 ---
 
-## 🙋🏽‍♂️ Author
+## 🗺️ Future Development
 
-**Jonathan Haile-Selassie Azembah**  
-💼 Full-Stack Developer | Mobile Dev | Cybersecurity Enthusiast  
-📧 blunttree8819@gmail.com  
-🔗 [GitHub](https://github.com/Blunttree-Gh) • [LinkedIn](https://linkedin.com/in/agambah)
+Planned improvements include:
+
+- Additional country storefronts
+- Expanded payment integrations
+- Improved product search and filtering
+- More advanced order tracking
+- Improved notification workflows
+- Improved offline handling
+- Performance optimization
+- Automated testing
+- Expanded analytics
+- Further backend/API improvements
+
+---
+
+## 👨🏽‍💻 About the Developer
+
+**Jonathan Haile-Selassie Azembah**
+
+**Junior Full-Stack Developer | React Native Developer | Cloud & Cybersecurity**
+
+I enjoy building practical software products, integrating APIs and solving difficult technical problems.
+
+My broader technical background includes:
+
+- React / React Native
+- JavaScript
+- Node.js
+- REST APIs
+- AWS
+- Git / GitHub
+- Web development
+- Mobile application development
+- Cybersecurity
+
+My cybersecurity background also influences how I approach application development, particularly around authentication, APIs, data handling and failure cases.
+
+---
+
+## 🔗 Links
+
+- **GitHub:** https://github.com/Blunttree-Gh
+- **LinkedIn:** https://linkedin.com/in/agambah
+- **Project Repository:** https://github.com/Blunttree-Gh/MakolaStore-repo
 
 ---
 
 ## 📄 License
 
-MIT License — free to use with credit.
+MIT License
 
-> Let’s build mobile-first African e-commerce experiences together.
+---
+
+> Built as a hands-on exploration of mobile commerce, API integration, multi-country architecture and real-world application debugging.
